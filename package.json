@@ -1,0 +1,22 @@
+{
+	"name": "bee-agent",
+	"version": "0.1.0",
+	"description": "A conversational agent powered by beeai-framework",
+	"dependencies": {
+		"beeai-framework": "^0.1.2",
+		"dotenv": "^16.4.7",
+		"picocolors": "^1.1.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.5",
+		"cross-env": "^7.0.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	},
+	"type": "module",
+	"scripts": {
+		"dev": "cross-env NODE_NO_WARNINGS=1 node --loader ts-node/esm bee-workflow.ts",
+		"build": "tsc",
+		"start": "npm run build && cross-env NODE_NO_WARNINGS=1 node dist/bee-workflow.js"
+	}
+}
